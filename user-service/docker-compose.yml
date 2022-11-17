@@ -1,0 +1,15 @@
+# docker run -d -rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
+
+version: '3.8'
+
+services:
+
+  user-service:
+    image: smjaknis/user-service
+    container_name: user-service
+    ports:
+      - 9002:9002
+    volumes:
+      - userservice:/data/userservice
+volumes:
+  userservice:

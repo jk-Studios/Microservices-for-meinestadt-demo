@@ -1,0 +1,15 @@
+# docker run -d -rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
+
+version: '3.8'
+
+services:
+
+  service-registry:
+    image: smjaknis/service-registry
+    container_name: service-registry
+    ports:
+      - 8761:8761
+    volumes:
+      - serviceregistry:/data/eureka
+volumes:
+  serviceregistry:
