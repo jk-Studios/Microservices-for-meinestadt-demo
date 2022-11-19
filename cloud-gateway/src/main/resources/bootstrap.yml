@@ -2,4 +2,4 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://192.168.0.227:9296
+      uri: http://192.168.0.227:30031
